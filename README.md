@@ -10,7 +10,7 @@ Node >= 18
 
 ### How to run locally?
 ```
-node server.js
+npm start
 ```
 Access the website at [localhost:8080](localhost:3000)
 

@@ -32,8 +32,9 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh 'sonar-scanner -Dsonar.projectKey=my-nodejs-project'
+                def scannerHome = tool 'SonarScanner';
+                withSonarQubeEnv() {
+                         sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=my-nodejs-project"
                 }
             }
         }

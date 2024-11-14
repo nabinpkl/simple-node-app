@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "build": "cp src/index.js dist/index.js && tar -czf dist/my-app.tar.gz dist"
+    "build": "cp src/index.js dist/index.js && tar --exclude=dist/my-app.tar.gz -czf dist/my-app.tar.gz dist"
   },
   "author": "Nabin Pokhrel",
   "license": "ISC",

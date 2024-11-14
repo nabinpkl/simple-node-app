@@ -26,7 +26,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'npm run build'  // Assumes build command is defined in package.json
+                sh 'npm run build'
             }
         }
 

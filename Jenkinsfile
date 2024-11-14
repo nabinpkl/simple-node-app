@@ -60,7 +60,7 @@ pipeline {
         stage('Deploy to Nexus') {
             steps {
                 nexusArtifactUploader artifacts: [
-                    [artifactId: 'my-app', classifier: '', file: 'dist/my-app.zip', type: 'zip']
+                    [artifactId: 'my-app', classifier: '', file: 'dist/my-app.tar.gz', type: 'tar.gz']
                 ],
                 credentialsId: "${NEXUS_CREDENTIALS_ID}",
                 groupId: 'com.nabin',
